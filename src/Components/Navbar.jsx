@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../Assets/lemonlogo.png'
 
 const Links =[
@@ -15,6 +15,7 @@ const Links =[
   },
 ];
 const Navbar = () => {
+  const router= useNavigate();
   return (
     <div className='w-full border-b border-gray-500 fixed z-50 backdrop-blur '>
       <div className='flex justify-between items-center'>
@@ -29,8 +30,8 @@ const Navbar = () => {
             ))}
           </div>
           <div className='flex gap-10 p-4'>
-            <button className='p-4 bg-sky-500 rounded-xl'>Login</button>
-            <button className='p-4 bg-sky-500 rounded-xl'>Signup</button>
+            <button className='p-4 bg-sky-500 rounded-xl' onClick={()=>router('/login')}>Login</button>
+            <button className='p-4 bg-sky-500 rounded-xl' onClick={()=>router('/signup')}>Signup</button>
           </div>
       </div>
     </div>
