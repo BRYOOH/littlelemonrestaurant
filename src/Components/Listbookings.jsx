@@ -1,4 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { GetAll } from '../API';
+
+// useEffect(async()=>{
+// await GetAll();
+// },[]);
 
 const Listbookings = () => {
   return (
